@@ -1,0 +1,423 @@
+/* ════════════════════════════════════
+   PAGE HERO
+════════════════════════════════════ */
+.page-hero {
+  min-height: 480px;
+  background: var(--ink);
+  display: flex; align-items: flex-end;
+  position: relative; overflow: hidden;
+  /* background-image: url(/my-react-app/public/Happy-Hour.avif); */
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  background: url('/menu-banner.avif') center/cover no-repeat;
+  opacity: .25;
+  transform: scale(1.06);
+  animation: zoomIn 14s ease-out forwards;
+}
+@keyframes zoomIn { to { transform: scale(1) } }
+
+.page-hero-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,15,26,.98) 0%, rgba(10,15,26,.5) 60%, rgba(10,15,26,.3) 100%);
+}
+.page-hero-content {
+  position: relative; z-index: 2;
+  width: 100%;
+  padding: clamp(8rem, 14vw, 12rem) var(--sx) clamp(3.5rem, 5vw, 5rem);
+  display: flex; flex-direction: column; gap: 1.2rem;
+  margin-inline: auto; max-width: 100%;
+}
+.page-hero-num {
+  font-family: var(--display);
+  font-size: clamp(10rem, 22vw, 22rem);
+  color: rgba(232,97,74,.05); line-height: 1;
+  position: absolute; top: 0; right: -.1em;
+  pointer-events: none; user-select: none; letter-spacing: .05em;
+  animation: fadeUp 1.2s ease .2s both;
+}
+.page-hero-title { color: var(--ivory); animation: fadeUp .9s ease .6s both; }
+.page-hero-title span { color: var(--terra); font-style: italic; }
+.page-hero-sub {
+  font-size: clamp(.9rem, 1.3vw, 1.1rem); line-height: 1.9;
+  color: rgba(255,255,255,.7); max-width: 480px;
+  font-weight: 300; letter-spacing: .02em;
+  animation: fadeUp .8s ease .8s both;
+}
+.page-hero-loc {
+  display: flex; align-items: center; gap: .75rem;
+  font-family: var(--sans); font-size: .52rem; font-weight: 500;
+  letter-spacing: .28em; text-transform: uppercase; color: rgba(255,255,255,.5);
+  animation: fadeUp .8s ease 1s both; margin-top: .5rem;
+}
+.page-hero-loc::before { content: ''; width: 24px; height: 1px; background: var(--terra); }
+.page-hero-eyebrow { color: var(--terra-lt) !important; animation: fadeUp .8s ease .4s both; }
+.page-hero-eyebrow::before { background: var(--terra) !important; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px) } to { opacity: 1; transform: none } }
+
+/* ════════════════════════════════════
+   TICKER
+════════════════════════════════════ */
+.ticker {
+  background: var(--ink-soft); overflow: hidden;
+  padding: .9rem 0;
+  border-top: 1px solid rgba(232,97,74,.2);
+  border-bottom: 1px solid rgba(232,97,74,.2);
+}
+.ticker-track {
+  display: flex; gap: 0; white-space: nowrap;
+  animation: ticker 28s linear infinite;
+}
+.ticker-item {
+  display: inline-flex; align-items: center; gap: 1.5rem; padding-right: 1.5rem;
+  font-family: var(--sans); font-size: .62rem; font-weight: 400; letter-spacing: .2em;
+  text-transform: uppercase; color: rgba(240,238,232,.5);
+}
+.ticker-item::after { content: '✦'; font-style: normal; font-size: .55rem; color: var(--terra); }
+@keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+
+/* ════════════════════════════════════
+   STICKY MENU NAV
+════════════════════════════════════ */
+.menu-nav-section {
+  background: var(--ink); padding: 0;
+  position: sticky; top: 87px; z-index: 200;
+  border-bottom: 1px solid rgba(232,97,74,.15);
+}
+.menu-nav-inner {
+  display: flex; align-items: stretch;
+  max-width: var(--wrap); margin-inline: auto;
+  padding-inline: var(--sx);
+  overflow-x: auto; scrollbar-width: none;
+}
+.menu-nav-inner::-webkit-scrollbar { display: none; }
+.menu-tab {
+  font-family: var(--sans); font-size: .62rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  padding: 1.3rem 1.75rem;
+  border-bottom: 2px solid transparent;
+  transition: color .3s, border-color .3s;
+  white-space: nowrap; cursor: pointer;
+  background: none; border-top: none; border-left: none; border-right: none;
+  display: flex; align-items: center; gap: .5rem;
+}
+.menu-tab:hover { color: rgba(255,255,255,.8); }
+.menu-tab.active { color: var(--terra-lt); border-bottom-color: var(--terra); }
+.menu-tab-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--terra); opacity: 0; transition: opacity .3s;
+}
+.menu-tab.active .menu-tab-dot { opacity: 1; }
+
+/* ════════════════════════════════════
+   SECTION INTRO (reusable)
+════════════════════════════════════ */
+.section-intro {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 2rem; margin-bottom: clamp(3rem, 5vw, 5rem); flex-wrap: wrap;
+}
+.section-intro-left { flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 1.4rem; }
+.section-intro-right {
+  flex-shrink: 0; max-width: 320px; font-size: 1rem; line-height: 1.85;
+  color: var(--mist); font-style: italic; font-family: var(--sans);
+  font-weight: 400; letter-spacing: .02em;
+}
+
+/* ════════════════════════════════════
+   MENU CARDS — PDF LINKS
+════════════════════════════════════ */
+.menu-cards-section { padding: var(--sy) 0; background: var(--olive); }
+.menu-cards-section .eyebrow { color: #fff; }
+.menu-cards-section .eyebrow::before { background: var(--terra); }
+.menu-cards-section .heading-lg { color: var(--ivory); }
+.menu-cards-section .section-intro-right { color: rgba(255,255,255,.6); }
+
+.menu-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: clamp(.75rem, 1.5vw, 1.25rem);
+}
+.menu-card {
+  position: relative; overflow: hidden; background: var(--cream);
+  cursor: pointer; min-height: 500px;
+}
+.menu-card-img {
+  width: 100%; height: 100%; object-fit: cover;
+  position: absolute; inset: 0;
+  transform: scale(1.06); transition: transform .7s ease;
+}
+.menu-card:hover .menu-card-img { transform: scale(1); }
+.menu-card-veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,15,26,.9) 30%, rgba(10,15,26,.15) 70%, transparent 100%);
+  transition: background .4s;
+}
+.menu-card:hover .menu-card-veil {
+  background: linear-gradient(to top, rgba(10,15,26,.95) 0%, rgba(10,15,26,.65) 65%, transparent 100%);
+}
+.menu-card-body { position: absolute; bottom: 0; left: 0; right: 0; padding: clamp(1.5rem, 3vw, 2rem); }
+.menu-card-cat {
+  font-family: var(--sans); font-size: .62rem; font-weight: 600;
+  letter-spacing: .32em; text-transform: uppercase; color: var(--terra-lt); margin-bottom: .4rem;
+}
+.menu-card-title {
+  font-family: var(--display); font-size: clamp(1.4rem, 2vw, 1.9rem);
+  letter-spacing: .04em; color: #fff; margin-bottom: .6rem; line-height: 1.15;
+}
+.menu-card-desc {
+  font-family: var(--display); font-style: italic;
+  font-size: .92rem; color: rgba(255,255,255,.65); line-height: 1.7;
+  opacity: 0; transform: translateY(8px); transition: all .4s ease .1s;
+}
+.menu-card:hover .menu-card-desc { opacity: 1; transform: none; }
+.menu-card-cta {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-family: var(--sans); font-size: .52rem; font-weight: 600;
+  letter-spacing: .25em; text-transform: uppercase;
+  color: var(--terra-lt); margin-top: 1rem;
+  opacity: 0; transition: opacity .4s ease .15s;
+}
+.menu-card-cta::after { content: '↗'; }
+.menu-card:hover .menu-card-cta { opacity: 1; }
+@media (hover: none) {
+  .menu-card-desc, .menu-card-cta { opacity: 1 !important; transform: none !important; }
+}
+
+/* ════════════════════════════════════
+   FEATURED DRINKS
+════════════════════════════════════ */
+.cocktails-section { padding: var(--sy) 0; background: var(--ivory); }
+.cocktails-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(.75rem, 2vw, 1.25rem);
+}
+.drink-card {
+  background: #fff; border: 1px solid var(--border); overflow: hidden;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s;
+  display: flex; flex-direction: column;
+}
+.drink-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(10,15,26,.12); border-color: var(--border-t); }
+.drink-img-wrap { overflow: hidden; }
+.drink-img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .6s ease; filter: saturate(1.1); }
+.drink-card:hover .drink-img { transform: scale(1.06); }
+.drink-body { padding: 1.4rem 1.5rem 1.6rem; }
+.drink-name { font-family: var(--display); font-size: .98rem; letter-spacing: .05em; color: var(--ink); margin-bottom: .4rem; }
+.drink-ingr { font-family: var(--sans); font-style: italic; font-size: .85rem; line-height: 1.7; color: var(--mist); }
+.drink-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .9rem 1.5rem; border-top: 1px solid var(--border);
+  background: var(--ivory); margin-top: auto;
+}
+.drink-price { font-family: var(--display); font-size: 1.1rem; color: var(--terra); letter-spacing: .04em; }
+.drink-tag {
+  font-family: var(--sans); font-size: .48rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--mist); background: rgba(13,27,46,.07); padding: .3rem .7rem;
+}
+
+/* ════════════════════════════════════
+   FULL COCKTAIL LIST
+════════════════════════════════════ */
+.cocktail-list-section { padding: var(--sy) 0; background: var(--olive); }
+.cocktail-list-section .eyebrow { color: #fff; }
+.cocktail-list-section .eyebrow::before { background: var(--terra); }
+.cocktail-list-section .heading-lg { color: var(--ivory); }
+.cocktail-list-section .section-intro-right { color: rgba(255,255,255,.6); }
+
+.cocktail-categories {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+.cocktail-cat {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(237,231,217,.1);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+}
+.cocktail-cat-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(232,97,74,.2);
+  margin-bottom: 1.5rem;
+}
+.cocktail-cat-title { font-family: var(--display); font-size: 1.4rem; color: var(--ivory); letter-spacing: .06em; }
+.cocktail-cat-label {
+  font-family: var(--sans); font-size: .48rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--terra-lt); background: rgba(232,97,74,.12); padding: .3rem .8rem;
+}
+.cocktail-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+.cocktail-item {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  padding: .85rem 0;
+  border-bottom: 1px solid rgba(237,231,217,.07);
+  transition: background .25s, padding-left .2s;
+}
+.cocktail-item:last-child { border-bottom: none; }
+.cocktail-item:hover { padding-left: .5rem; }
+.cocktail-left { flex: 1; }
+.cocktail-name { font-family: var(--display); font-size: 1rem; color: var(--ivory); letter-spacing: .04em; margin-bottom: .25rem; }
+.cocktail-ingr { font-family: var(--sans); font-size: .75rem; font-style: italic; color: rgba(255,255,255,.45); line-height: 1.5; letter-spacing: .01em; }
+.cocktail-price { font-family: var(--display); font-size: 1rem; color: var(--terra-lt); letter-spacing: .04em; flex-shrink: 0; }
+
+/* ════════════════════════════════════
+   SPIRITS
+════════════════════════════════════ */
+.spirits-section { padding: var(--sy) 0; background: var(--ink); }
+.spirits-section .eyebrow { color: var(--terra-lt); }
+.spirits-section .eyebrow::before { background: var(--terra); }
+.spirits-section .heading-lg { color: var(--ivory); }
+.spirits-section .section-intro-right { color: rgba(255,255,255,.55); }
+
+.spirits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.5rem); }
+.spirit-cat { border: 1px solid rgba(237,231,217,.09); overflow: hidden; }
+.spirit-cat-header {
+  background: rgba(232,97,74,.1); border-bottom: 1px solid rgba(232,97,74,.2);
+  padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between;
+}
+.spirit-cat-name { font-family: var(--display); font-size: 1.1rem; color: var(--ivory); letter-spacing: .06em; }
+.spirit-count { font-family: var(--sans); font-size: .48rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--terra-lt); }
+.spirit-list { padding: .5rem 0; }
+.spirit-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .65rem 1.5rem;
+  border-bottom: 1px solid rgba(237,231,217,.06);
+  transition: background .25s, padding-left .2s;
+}
+.spirit-item:last-child { border-bottom: none; }
+.spirit-item:hover { background: rgba(232,97,74,.07); padding-left: 1.75rem; }
+.spirit-name { font-family: var(--sans); font-size: .75rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.7); }
+.spirit-price { font-family: var(--display); font-size: .95rem; color: var(--terra-lt); letter-spacing: .04em; }
+
+/* ════════════════════════════════════
+   WINE & BUBBLES
+════════════════════════════════════ */
+.wine-section { padding: var(--sy) 0; background: var(--cream); }
+.wine-section .eyebrow { color: var(--mist); }
+.wine-section .eyebrow::before { background: var(--terra); }
+
+.wine-tabs {
+  display: flex; gap: 0; flex-wrap: wrap;
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+  border-bottom: 1px solid var(--border);
+}
+.wine-tab {
+  font-family: var(--sans); font-size: .6rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--mist); padding: 1rem 1.75rem;
+  border-bottom: 2px solid transparent;
+  transition: color .3s, border-color .3s;
+  cursor: pointer; background: none; border-top: none; border-left: none; border-right: none;
+}
+.wine-tab:hover { color: var(--ink); }
+.wine-tab.active { color: var(--terra); border-bottom-color: var(--terra); }
+
+.wine-panel { display: block; }
+
+.wine-list {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; border: 1px solid var(--border);
+}
+.wine-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+  padding: 1.1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  transition: background .25s;
+}
+.wine-item:nth-child(even) { border-right: none; }
+.wine-item:hover { background: rgba(232,97,74,.05); }
+.wine-name { font-family: var(--display); font-size: 1rem; color: var(--ink); letter-spacing: .03em; margin-bottom: .2rem; }
+.wine-region { font-family: var(--sans); font-size: .65rem; font-style: italic; color: var(--mist); letter-spacing: .05em; }
+.wine-price { font-family: var(--display); font-size: 1rem; color: var(--terra); letter-spacing: .04em; flex-shrink: 0; text-align: right; }
+.wine-price-label { font-family: var(--sans); font-size: .48rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--mist); display: block; margin-top: .15rem; }
+
+/* ════════════════════════════════════
+   NON-ALCOHOLIC
+════════════════════════════════════ */
+.na-section {
+  padding: var(--sy) 0;
+  background: var(--ivory);
+  position: relative; overflow: hidden;
+}
+.na-section::before {
+  content: '"'; position: absolute; top: -3rem; left: -1rem;
+  font-family: var(--display); font-style: italic;
+  font-size: clamp(14rem, 28vw, 32rem);
+  color: rgba(10,15,26,.04); line-height: 1; pointer-events: none;
+}
+.na-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: clamp(.75rem, 2vw, 1.25rem); position: relative; z-index: 1;
+}
+.na-card {
+  background: #fff; border: 1px solid var(--border);
+  padding: 1.75rem;
+  transition: border-color .35s, transform .35s, box-shadow .35s;
+  position: relative; overflow: hidden;
+}
+.na-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--terra); transition: height .5s ease; }
+.na-card:hover::before { height: 100%; }
+.na-card:hover { border-color: var(--border-t); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(10,15,26,.1); }
+.na-name { font-family: var(--display); font-size: 1.1rem; color: var(--ink); letter-spacing: .04em; margin-bottom: .5rem; }
+.na-desc { font-family: var(--sans); font-size: .82rem; font-style: italic; line-height: 1.7; color: var(--mist); margin-bottom: 1rem; }
+.na-footer { display: flex; align-items: center; justify-content: space-between; }
+.na-price { font-family: var(--display); font-size: 1.1rem; color: var(--terra); letter-spacing: .04em; }
+.na-badge { font-family: var(--sans); font-size: .48rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--mist); background: rgba(13,27,46,.07); padding: .3rem .7rem; }
+
+/* ════════════════════════════════════
+   RESERVE BANNER
+════════════════════════════════════ */
+.reserve-banner { position: relative; min-height: 60vh; display: flex; align-items: center; overflow: hidden; }
+.reserve-bg {
+  position: absolute; inset: 0;
+  background: url('/Private\ Events.avif') center/cover no-repeat;
+}
+.reserve-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(105deg, rgba(10,15,26,.97) 0%, rgba(10,15,26,.9) 40%, rgba(10,15,26,.6) 70%, transparent 100%);
+}
+.reserve-inner {
+  position: relative; z-index: 2;
+  max-width: var(--wrap); margin-inline: auto;
+  padding-inline: var(--sx); padding-block: var(--sy);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 4rem; flex-wrap: wrap;
+}
+.reserve-left { display: flex; flex-direction: column; gap: 1.4rem; max-width: 560px; }
+.reserve-left .eyebrow { color: var(--terra-lt); }
+.reserve-left .eyebrow::before { background: var(--terra); }
+.reserve-left .heading-lg { color: var(--ivory); }
+.reserve-left .heading-lg em { color: var(--terra-lt); font-style: italic; font-family: var(--display); }
+.reserve-left p { font-size: clamp(.9rem, 1.3vw, 1rem); line-height: 1.9; color: rgba(255,255,255,.7); font-weight: 300; letter-spacing: .02em; }
+.reserve-right { display: flex; flex-direction: column; gap: 1rem; flex-shrink: 0; }
+
+/* ════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .menu-grid { grid-template-columns: 1fr 1fr; }
+  .cocktails-grid { grid-template-columns: 1fr 1fr; }
+  .cocktail-categories { grid-template-columns: 1fr; }
+  .spirits-grid { grid-template-columns: 1fr 1fr; }
+  .wine-list { grid-template-columns: 1fr; }
+  .wine-item { border-right: none !important; }
+  .na-grid { grid-template-columns: 1fr 1fr; }
+  .reserve-inner { flex-direction: column; gap: 2.5rem; align-items: flex-start; }
+  .section-intro { margin-bottom: 2rem; }
+  .menu-nav-section { display: none; }
+
+  .menu-cards-section, .cocktails-section, .cocktail-list-section,
+  .spirits-section, .wine-section, .na-section { padding-top: 4rem; padding-bottom: 4rem; }
+  .reserve-inner { padding-top: 4rem; padding-bottom: 4rem; }
+  .section-intro { flex-direction: column; align-items: flex-start; }
+  .section-intro-right { max-width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .cocktails-grid { grid-template-columns: 1fr; }
+  .spirits-grid { grid-template-columns: 1fr; }
+  .na-grid { grid-template-columns: 1fr; }
+  .wine-tabs { gap: 0; }
+  .wine-tab { padding: .9rem 1.1rem; font-size: .56rem; }
+}
