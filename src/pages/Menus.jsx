@@ -5,6 +5,7 @@ import {
   SPIRITS, WINE_TABS, WINE_DATA, NA_ITEMS, MENU_TABS, TICKER_ITEMS,
 } from '../data/menusData';
 import './Menus.css';
+import InstagramSection from '../components/InstagramSection';
 
 const RESERVE_URL =
   'https://www.opentable.com/r/salvatores-cucina-and-lounge-reservations-san-marcos?restref=1474873';
@@ -346,30 +347,14 @@ export default function Menus() {
         </div>
       </section>
 
-      {/* ══ RESERVE BANNER ══ */}
-      <section className="reserve-banner">
-        <div className="reserve-bg" />
-        <div className="reserve-inner">
-          <div className="reserve-left r-left">
-            <div className="eyebrow">Come Join Us</div>
-            <h2 className="heading-lg">
-              Reserve Your<br /><em>Table Tonight</em>
-            </h2>
-            <p>
-              Whether it's dinner for two, a birthday celebration, or after-hours cocktails —
-              Salvatore's has a seat with your name on it. Book ahead for the best experience.
-            </p>
-          </div>
-          <div className="reserve-right r-right">
-            <a href={RESERVE_URL} target="_blank" rel="noreferrer" className="btn btn-terra btn-arrow">
-              Reserve on OpenTable
-            </a>
-            <a href="https://salvatoressandiego.com/private-events/" className="btn btn-outline-light">
-              Inquire About Private Events
-            </a>
-          </div>
-        </div>
-      </section>
+
+
+
+      {/* ══ INSTAGRAM ══ */}
+      <InstagramSection />
+
+
+
     </>
   );
 }
