@@ -348,13 +348,7 @@ export default function Menus() {
       </section>
 
 
-
-
-      {/* ══ INSTAGRAM ══ */}
-      <InstagramSection />
-
-
-
+ 
     </>
   );
 }
