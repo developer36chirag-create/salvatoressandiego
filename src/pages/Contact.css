@@ -76,7 +76,7 @@
    MAP SECTION
 ════════════════════════════════════ */
 .find-us-section { position: relative; min-height: 70vh; display: flex; align-items: stretch; overflow: hidden; }
-.find-us-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1800&q=85&auto=format') center/cover no-repeat; }
+.find-us-bg { position: absolute; inset: 0; background: url('/photo-1555396273-367ea4eb4db5.avif') center/cover no-repeat; }
 .find-us-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(10,15,26,.98) 0%, rgba(10,15,26,.93) 35%, rgba(10,15,26,.6) 65%, transparent 100%); }
 .find-us-inner { position: relative; z-index: 2; width: 100%; max-width: var(--wrap); margin-inline: auto; padding: var(--sy) var(--sx); display: grid; grid-template-columns: 1fr; gap: clamp(3rem, 6vw, 8rem); align-items: center; }
 .find-us-right { background: rgba(255,255,255,.04); border: 1px solid rgba(237,231,217,.1); overflow: hidden; min-height: 400px; display: flex; flex-direction: column; }

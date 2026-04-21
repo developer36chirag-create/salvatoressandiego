@@ -181,7 +181,6 @@ export default function Contact() {
                 <div className="info-block-label">Phone</div>
                 <div className="info-block-val">
                   <a href="tel:6193802208">(619) 380-2208</a> — Restaurant<br />
-                  <a href="tel:8584218870">(858) 421-8870</a> — Private Events
                 </div>
               </div>
             </div>

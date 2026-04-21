@@ -17,7 +17,9 @@ export default function Footer() {
       <div className="footer-top">
         {/* Brand */}
         <div className="footer-brand">
-          <img className="footer-logo" src={LOGO_URL} alt="Salvatore's" />
+          <a href="/">
+            <img className="footer-logo" src={LOGO_URL} alt="Salvatore's" />
+          </a>
           <p>
             Drawing inspiration from the shores of Italy and the Mediterranean — bold flavors,
             modern elegance, and a vibrant lounge vibe in the heart of the Marina District.

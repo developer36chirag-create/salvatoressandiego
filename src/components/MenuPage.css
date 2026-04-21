@@ -8,6 +8,7 @@
   display: flex; align-items: flex-end;
   position: relative; overflow: hidden;
   padding: clamp(8rem, 14vw, 11rem) var(--sx) clamp(4rem, 6vw, 5.5rem);
+  /* background-image: url(/my-react-app/public/DSC08655.jpg); */
 }
 .mp-hero-bg {
   position: absolute; inset: 0;

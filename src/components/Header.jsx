@@ -14,7 +14,7 @@ const NAV_LINKS = [
     dropdown: [
       { label: 'Happy Hour', to: '/HAPPY-HOUR-MENU_cropped.pdf' },
       { label: 'Drinks',     to: '/DRINK-MENU-1.pdf' },
-      { label: 'Dinner',     to: '/menus/OFFICIAL-DINNER-MENU-.pdf' },
+      { label: 'Dinner',     to: '/OFFICIAL-DINNER-MENU.pdf' },
       { label: 'Brunch',     to: '/BRUNCH-MENU.pdf' },
     ],
   },
@@ -59,6 +59,7 @@ function DropdownNavItem({ label, to, dropdown }) {
               key={dTo}
               to={dTo}
               className="nav-dropdown-link"
+              target="_blank"
               role="menuitem"
               onClick={() => setOpen(false)}
             >

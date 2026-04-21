@@ -263,7 +263,7 @@ export const TICKER_ITEMS = [
 // ─── BRUNCH DATA ─────────────────────────────────────────
 export const BRUNCH = {
   hero: {
-    bg: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08229-1-1024x683.jpg',
+    bg: '/DSC08229.jpg',
     eyebrow: "Salvatore's Cucina & Lounge",
     title: 'Brunch',
     titleEm: 'Menu',
@@ -288,7 +288,7 @@ export const BRUNCH = {
       title: 'Brunch',
       note: 'Weekend mornings, elevated with bold Mediterranean touch.',
       feature: {
-        img: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08229-1-1024x683.jpg',
+        img: '/DSC08229.jpg',
         alt: 'Steak & Eggs',
         badge: 'Weekend Favourite',
         name: 'Steak & Eggs',
@@ -332,7 +332,7 @@ export const BRUNCH = {
 // ─── DINNER DATA ─────────────────────────────────────────
 export const DINNER = {
   hero: {
-    bg: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08482-1024x683.jpg',
+    bg: '/DSC08482.jpg',
     eyebrow: "Salvatore's Cucina & Lounge",
     title: 'Dinner',
     titleEm: 'Menu',
@@ -358,7 +358,7 @@ export const DINNER = {
       title: 'Starters',
       note: 'The perfect beginning — share, or keep them all to yourself.',
       feature: {
-        img: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08513-1024x653.jpg',
+        img: '/DSC08482.jpg',
         alt: 'Octopus',
         badge: "Chef's Pick",
         name: 'Octopus (GFO)',
@@ -414,7 +414,7 @@ export const DINNER = {
       title: 'Entrées',
       note: 'The heart of the experience — bold mains for the table.',
       feature: {
-        img: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08482-1024x683.jpg',
+        img: '/DSC08482.jpg',
         alt: 'Lamb Chops',
         badge: 'Signature',
         name: 'Lamb Chops',
@@ -446,7 +446,7 @@ export const DINNER = {
 // ─── DESSERTS DATA ────────────────────────────────────────
 export const DESSERTS = {
   hero: {
-    bg: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08655-1-1024x668.jpg',
+    bg: '/DSC08655.jpg',
     eyebrow: "Salvatore's Cucina & Lounge",
     title: 'Sweet',
     titleEm: 'Endings',

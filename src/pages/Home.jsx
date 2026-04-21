@@ -101,14 +101,6 @@ const REVIEWS = [
   },
 ];
 
-const INSTA_IMGS = [
-  'https://images.unsplash.com/photo-1574966739987-65dd0f5be0c3?w=400&q=80&auto=format',
-  'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&q=80&auto=format',
-  'https://images.unsplash.com/photo-1579631542720-3a87824fff86?w=400&q=80&auto=format',
-  'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80&auto=format',
-  'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80&auto=format',
-];
-
 const RESERVE_URL =
   'https://www.opentable.com/r/salvatores-cucina-and-lounge-reservations-san-marcos?restref=1474873';
 
@@ -196,7 +188,7 @@ export default function Home() {
                   <div className="menu-card-cat">{cat}</div>
                   <div className="menu-card-title">{title}</div>
                   <p className="menu-card-desc">{desc}</p>
-                  <a className="menu-card-cta" href={href} target="_blank" rel="noreferrer">
+                  <a className="menu-card-cta" href={href} rel="noreferrer">
                     View Menu
                   </a>
                 </div>

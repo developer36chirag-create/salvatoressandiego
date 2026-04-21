@@ -43,7 +43,6 @@ const OCCASIONS = [
 
 const CONTACT_DETAILS = [
   { ico: '📍', text: '750 Front St, San Diego, CA 92101' },
-  { ico: '📞', text: <><a href="tel:8584218870">(858) 421-8870</a> — Events Line</> },
   { ico: '📞', text: <><a href="tel:6193802208">(619) 380-2208</a> — Restaurant</> },
   { ico: '🕓', text: 'Events available 7 days a week · Private access from $3,000' },
 ];
