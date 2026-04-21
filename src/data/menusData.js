@@ -5,21 +5,21 @@ export const MENU_CARDS = [
     title: 'Dinner',
     desc: "An evening journey through Italy's finest — bold mains, handmade pastas",
     img: '/Dinner.avif',
-    href: 'https://salvatoressandiego.com/wp-content/uploads/2025/11/OFFICIAL-DINNER-MENU-.pdf',
+    href: '/menus/dinner',
   },
   {
     cat: 'Special',
     title: 'Brunch',
     desc: 'Weekends done right. Vibrant morning dishes, bottomless energy, and sun-drenched',
     img: '/Brunch.avif',
-    href: 'https://salvatoressandiego.com/wp-content/uploads/2025/11/BRUNCH-MENU.pdf',
+    href: '/menus/brunch',
   },
   {
     cat: 'Special',
     title: 'Desserts',
     desc: 'Close the night in style. Indulgent finales crafted to linger long after the last bite.',
     img: '/Desserts.avif',
-    href: 'https://salvatoressandiego.com/menu/',
+    href: '/menus/desserts',
   },
   {
     cat: 'Mon – Fri · 4–7 PM',
@@ -257,3 +257,245 @@ export const TICKER_ITEMS = [
   'Dinner Service', 'Weekend Brunch', 'Happy Hour Mon–Fri 4–7pm',
   'Craft Cocktails', 'Italian Mediterranean', 'Premium Wine List',
 ];
+
+
+
+// ─── BRUNCH DATA ─────────────────────────────────────────
+export const BRUNCH = {
+  hero: {
+    bg: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08229-1-1024x683.jpg',
+    eyebrow: "Salvatore's Cucina & Lounge",
+    title: 'Brunch',
+    titleEm: 'Menu',
+    sub: 'Saturday & Sunday mornings done beautifully — from lazy eggs to bold Italian flavors.',
+    hours: 'Saturday & Sunday · 10 AM – 3 PM',
+  },
+  ticker: [
+    'Brunch', 'Saturday & Sunday', '10:00 AM – 3:00 PM',
+    'Happy Hour Mon–Fri 4–7 PM', '750 Front St, Downtown San Diego', 'Reserve via OpenTable',
+    'Brunch', 'Saturday & Sunday', '10:00 AM – 3:00 PM',
+    'Happy Hour Mon–Fri 4–7 PM', '750 Front St, Downtown San Diego', 'Reserve via OpenTable',
+  ],
+  cta: {
+    eyebrow: 'Join Us for Brunch',
+    heading: 'Weekends are',
+    headingEm: 'Better',
+    headingEnd: 'Here',
+  },
+  categories: [
+    {
+      id: 'brunch',
+      title: 'Brunch',
+      note: 'Weekend mornings, elevated with bold Mediterranean touch.',
+      feature: {
+        img: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08229-1-1024x683.jpg',
+        alt: 'Steak & Eggs',
+        badge: 'Weekend Favourite',
+        name: 'Steak & Eggs',
+        price: '$28',
+        desc: 'Rib Eye, Two Fried Eggs, Roasted Potatoes, Calabrian Chili Aoili',
+      },
+      items: [
+        { name: 'Chilaquiles', price: '$17', desc: 'Rojo or Verde · Fried Egg, Salsa, Red Onions, Queso Fresco, Sour Cream, Avocado' },
+        { name: 'Huevos Rancheros', price: '$18', desc: 'Fried Egg, Tostada, Salsa Roja & Verde, Black Beans, Avocado, Sour Cream' },
+        { name: 'Rigatoni Carbonara', price: '$17', desc: 'Bacon Bits, English Peas, Mushroom Cream Sauce, Parmesan, Fried Egg · Served with French Fries' },
+        { name: 'Chicken Sandwich', price: '$18', desc: 'Chicken Milanese, Garlic Aoili, Arugula, Red Onions, Parmesan, Fried Egg · Served with French Fries' },
+        { name: 'Avocado Toast', price: '$16', desc: 'Sourdough Bread, Heirloom Cherry Tomatoes, Arugula, Avocado, Balsamic Glaze, Fried Egg' },
+        { name: 'Belgian Waffles', price: '$14', desc: 'Candied Walnuts & Strawberries' },
+      ],
+    },
+    {
+      id: 'salads',
+      title: 'Salads',
+      note: 'Light and seasonal — perfect alongside any plate.',
+      items: [
+        { name: 'Strawberry Salad', price: '$16', desc: 'Arugula, Red Onions, Candied Walnuts, Feta Cheese, Strawberry Vinaigrette' },
+        { name: 'Caesar Salad', price: '$15', desc: 'Parmigiano Reggiano, Breadcrumbs, Toasted Pumpkin Seeds' },
+      ],
+    },
+    {
+      id: 'sides',
+      title: 'Sides',
+      isLast: true,
+      sides: [
+        { name: 'Home Fries', price: '$8' },
+        { name: 'French Fries', price: '$6' },
+        { name: 'Bacon', price: '$6' },
+        { name: 'Chicken', price: '$8' },
+        { name: 'Italian Sausage', price: '$8' },
+        { name: 'Egg', price: '$5' },
+      ],
+    },
+  ],
+};
+
+// ─── DINNER DATA ─────────────────────────────────────────
+export const DINNER = {
+  hero: {
+    bg: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08482-1024x683.jpg',
+    eyebrow: "Salvatore's Cucina & Lounge",
+    title: 'Dinner',
+    titleEm: 'Menu',
+    sub: 'Bold Mediterranean flavors, crafted with intention — served nightly in the heart of the Marina District.',
+  },
+  ticker: [
+    'Dinner', 'Mon – Thu  4 PM – 11 PM', 'Fri 4 PM – 12 AM',
+    'Sat 10 AM – 12 AM', 'Sun 10 AM – 11 PM', 'Happy Hour Mon–Fri 4–7 PM',
+    '750 Front St, San Diego', 'Reservations via OpenTable',
+    'Dinner', 'Mon – Thu  4 PM – 11 PM', 'Fri 4 PM – 12 AM',
+    'Sat 10 AM – 12 AM', 'Sun 10 AM – 11 PM', 'Happy Hour Mon–Fri 4–7 PM',
+    '750 Front St, San Diego', 'Reservations via OpenTable',
+  ],
+  cta: {
+    eyebrow: 'Join Us',
+    heading: 'Ready for an',
+    headingEm: 'Unforgettable',
+    headingEnd: 'Evening?',
+  },
+  categories: [
+    {
+      id: 'starters',
+      title: 'Starters',
+      note: 'The perfect beginning — share, or keep them all to yourself.',
+      feature: {
+        img: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08513-1024x653.jpg',
+        alt: 'Octopus',
+        badge: "Chef's Pick",
+        name: 'Octopus (GFO)',
+        price: '$25',
+        desc: 'Roasted Potatoes, Roasted Tomatoes, Caper Berries, Romesco Sauce, Lemon Juice',
+      },
+      items: [
+        { name: 'Brussels Sprouts (V/GFO)', price: '$15', desc: 'Fried Brussels Sprouts, Gochujang Aoili, Pomegranate Reduction' },
+        { name: 'Truffle Corn', price: '$17', desc: 'Ricotta Cheese, Truffle Butter, Truffle Oil, Parmesan' },
+        { name: 'Roasted Carrots', price: '$13', desc: 'Whipped Ricotta, Pumpkin Seeds, Hot Honey' },
+        { name: 'Cheese Plate (GFO)', price: '$23', desc: 'Brie, Manchego, Blue Cheese, House Spreads, Candied Walnuts, Seasonal Fruit, Pita Bread · Add Prosciutto +$9' },
+        { name: 'Fried Gnocchi', price: '$16', desc: 'Malt Vinegar Aoili, Fried Sage' },
+        { name: 'Meatballs', price: '$16', desc: 'Spicy Vodka Sauce, Parmesan' },
+        { name: 'Roasted Broccolini', price: '$13', desc: 'Romesco Sauce, Pumpkin Seeds, Parmesan' },
+      ],
+    },
+    {
+      id: 'raw',
+      title: 'Raw',
+      note: 'Fresh, vibrant, and unapologetically bold.',
+      items: [
+        { name: 'Yellowtail Crudo', price: '$21', desc: 'Chili Oil, Serrano Peppers, Citrus Ponzu, Lime Juice, Cucumber, Cilantro, Red Onion' },
+        { name: 'Tuna Crudo', price: '$21', desc: 'Citrus Ponzu, Fried Shallots, Chili Oil, Serrano Peppers' },
+      ],
+    },
+    {
+      id: 'salads',
+      title: 'Salads',
+      note: 'Light, seasonal, and full of character.',
+      items: [
+        { name: 'Caesar Salad', price: '$17', desc: 'Parmesan Reggiano, Bread Crumbs, Toasted Pumpkin Seed' },
+        { name: 'Burrata Salad (GFO)', price: '$19', desc: 'Caprese Burrata Cheese, Heirloom Tomato, Pesto, Balsamic Glaze, EVOO' },
+        { name: 'Strawberry Salad', price: '$18', desc: 'Arugula, Red Onion, Candy Pecans, Feta Cheese, Strawberry Vinaigrette' },
+      ],
+    },
+    {
+      id: 'pasta',
+      title: 'Pasta',
+      note: 'House-crafted, Mediterranean-inspired.',
+      addons: 'Chicken $8 · Shrimp $11 · Burrata $8 · Prosciutto $9',
+      items: [
+        { name: 'Mushroom Pasta (V/GFO)', price: '$28', desc: 'Fettuccine, English Peas, Mustard Frill, Maitake Mushrooms, Truffle Oil' },
+        { name: 'Beef Bolognese (GFO)', price: '$29', desc: 'Rigatoni, Parmesan, Marinara' },
+        { name: 'Pesto Fussili (GFO)', price: '$29', desc: 'Fussili Pasta, Grilled Chicken, Sundried Tomatoes, Pesto, Creme Fraiche' },
+        { name: 'Baja Seafood Pasta', price: '$36', desc: 'Fusilli, Mussels, Shrimp, Roasted Tomato, Lemon Juice, Zucchini, Aji Amarillo, Breadcrumbs' },
+        { name: 'Lobster Ravioli', price: '$36', badge: 'Signature', desc: 'Lobster and Shrimp filled Ravioli, Creamy Pesto Marinara, Parmesan' },
+        { name: 'Spicy Vodka Rigatoni (GFO)', price: '$24', desc: 'Spicy Vodka Tomato Sauce, Mascarpone, Parmesan' },
+        { name: 'Fettuccini Marinara', price: '$18', desc: 'Marinara, Parmesan' },
+      ],
+    },
+    {
+      id: 'entrees',
+      title: 'Entrées',
+      note: 'The heart of the experience — bold mains for the table.',
+      feature: {
+        img: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08482-1024x683.jpg',
+        alt: 'Lamb Chops',
+        badge: 'Signature',
+        name: 'Lamb Chops',
+        price: '$46',
+        desc: 'Parmesan Couscous, Roasted Tomatoes, Gremolata, Balsamic Glaze',
+      },
+      items: [
+        { name: 'Steak Frites', price: '$49', desc: '8 oz Filet, Au Poivre Sauce, French Fries' },
+        { name: 'Pan Seared Salmon', price: '$38', desc: 'Whipped Ricotta, Roasted Carrots & Asparagus, Lemon Beurre Blanc' },
+        { name: 'Market Fish', price: '$36', desc: 'Fish of the Day, Romesco Sauce, Roasted Corn, Couscous Sofrito' },
+        { name: 'Roasted Half Chicken (GF)', price: '$34', desc: 'Potato Puree, Roasted Asparagus, Gremolata' },
+        { name: 'Chicken Parmigiana', price: '$28', desc: 'Breaded Chicken Breast, Spicy Vodka Sauce, Fusilli, Mozzarella' },
+        { name: "Salvatore's Burger", price: '$22', desc: 'House Sauce, Garlic Aoili, Mozzarella, Fried Onions · Served with French Fries' },
+      ],
+    },
+    {
+      id: 'sides',
+      title: 'Sides',
+      isLast: true,
+      sides: [
+        { name: 'Focaccia', price: '$7' },
+        { name: 'Mashed Potatoes', price: '$12' },
+        { name: 'French Fries', price: '$10' },
+      ],
+    },
+  ],
+};
+
+// ─── DESSERTS DATA ────────────────────────────────────────
+export const DESSERTS = {
+  hero: {
+    bg: 'https://salvatoressandiego.com/wp-content/uploads/2026/02/DSC08655-1-1024x668.jpg',
+    eyebrow: "Salvatore's Cucina & Lounge",
+    title: 'Sweet',
+    titleEm: 'Endings',
+    sub: 'Italian-inspired desserts and handcrafted sips to close out the perfect evening.',
+  },
+  ticker: [
+    'Desserts', 'Italian Inspired',
+    'Tiramisu · Cheesecake · Carrot Cake · Chocolate Cake',
+    'Dessert Trio $32', 'Sips & Boozy Blends', '750 Front St, Downtown San Diego',
+    'Desserts', 'Italian Inspired',
+    'Tiramisu · Cheesecake · Carrot Cake · Chocolate Cake',
+    'Dessert Trio $32', 'Sips & Boozy Blends', '750 Front St, Downtown San Diego',
+  ],
+  cta: {
+    eyebrow: 'End the Night Right',
+    heading: 'Reserve Your',
+    headingEm: 'Table',
+    headingEnd: 'Tonight',
+  },
+  trio: {
+    label: "Chef's Selection",
+    title: 'Dessert Trio',
+    price: '$32',
+    items: [
+      { name: 'Tiramisu', desc: 'Mascarpone Custard, Lady Fingers, Espresso' },
+      { name: 'Carrot Cake', desc: 'Orange Reduction, Cream Cheese Frosting, Walnuts' },
+      { name: 'Cheesecake', desc: 'Fruit Compote, Brown Sugar Crust, White Chocolate' },
+    ],
+  },
+  sips: [
+    { name: 'Espresso', price: '$5' },
+    { name: 'Cappuccino', price: '$7' },
+    { name: 'Hot Tea', price: '$5' },
+    { name: 'Carajillo', price: '$16' },
+    { name: "Salvatore's Carajillo", price: '$17' },
+    { name: 'Negroni', price: '$15' },
+  ],
+  categories: [
+    {
+      id: 'desserts',
+      title: 'Desserts',
+      note: 'The perfect finale to every visit.',
+      items: [
+        { name: 'Tiramisu', price: '$10', badge: 'Classic', desc: 'Mascarpone Custard, Lady Fingers, Espresso' },
+        { name: 'Cheesecake — Vanilla', price: '$13', desc: 'Fruit Compote, Brown Sugar Crust, White Chocolate' },
+        { name: 'Cheesecake — Salted Caramel', price: '$14', desc: 'Fruit Compote, Brown Sugar Crust, White Chocolate, Salted Caramel' },
+        { name: 'Carrot Cake', price: '$13', desc: 'Orange Reduction, Cream Cheese Frosting, Walnuts' },
+        { name: 'Chocolate Cake', price: '$13', desc: 'Salted Caramel, Dark Chocolate Mousse, Ganache' },
+      ],
+    },
+  ],
+};

@@ -1,4 +1,4 @@
-import './InstagramSection.css';
+// All Instagram styles live in index.css — no local CSS import needed
 
 const INSTA_IMGS = [
   'https://images.unsplash.com/photo-1574966739987-65dd0f5be0c3?w=400&q=80&auto=format',
@@ -8,7 +8,7 @@ const INSTA_IMGS = [
   'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80&auto=format',
 ];
 
-export default function InstagramSection({ btnVariant = 'outline-ink' }) {
+export default function InstagramSection() {
   return (
     <section className="instagram-section">
       <div className="wrap">

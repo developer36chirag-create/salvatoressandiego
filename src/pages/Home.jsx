@@ -16,19 +16,19 @@ const MENUS = [
     cat: 'Special', title: 'Dinner',
     desc: 'An evening journey through Italys finest — bold mains, handmade pastas, and rich seasonal flavors.',
     img: '/Dinner.avif',
-    href: 'https://salvatoressandiego.com/wp-content/uploads/2025/11/OFFICIAL-DINNER-MENU-.pdf',
+    href: '/menus/dinner',
   },
   {
     cat: 'Special', title: 'Brunch',
     desc: 'Weekends done right. Vibrant morning dishes, bottomless energy, and sun-drenched Italian flavors.',
     img: '/Brunch.avif',
-    href: 'https://salvatoressandiego.com/wp-content/uploads/2025/11/BRUNCH-MENU.pdf',
+    href: '/menus/brunch',
   },
   {
     cat: 'Special', title: 'Desserts',
     desc: 'Close the night in style. Indulgent finales crafted to linger long after the last bite.',
     img: '/Desserts.avif',
-    href: 'https://salvatoressandiego.com/menu/',
+    href: '/menus/desserts',
   },
 ];
 
