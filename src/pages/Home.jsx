@@ -131,7 +131,7 @@ export default function Home() {
             Bold flavors, inventive drinks, and a lounge vibe worth escaping to.
           </p>
           <div className="hero-btns">
-            <a href="https://salvatoressandiego.com/menu/" className="btn btn-terra btn-arrow">
+            <a href="/menus" className="btn btn-terra btn-arrow">
               View Menu
             </a>
             <a href={RESERVE_URL} target="_blank" rel="noreferrer" className="btn btn-outline-ink">
@@ -248,7 +248,7 @@ export default function Home() {
           </div>
 
           <a
-            href="https://salvatoressandiego.com/menu/"
+            href="/menus"
             className="btn btn-terra btn-arrow"
             style={{ marginTop: '2.5rem' }}
           >
@@ -271,7 +271,7 @@ export default function Home() {
               gatherings, our exclusive Medusa Room delivers an unforgettable experience —
               fully curated for you.
             </p>
-            <a href="https://salvatoressandiego.com/contact-us/" className="btn btn-terra btn-arrow">
+            <a href="/contact" className="btn btn-terra btn-arrow">
               Inquire Now
             </a>
           </div>
@@ -288,7 +288,7 @@ export default function Home() {
                 ))}
               </ul>
               <a
-                href="https://salvatoressandiego.com/contact-us/"
+                href="https://www.opentable.com/r/salvatores-cucina-and-lounge-reservations-san-marcos?restref=1474873"
                 className="btn btn-outline-light"
               >
                 Book This Package

@@ -128,7 +128,7 @@ export default function Contact() {
             question about our menu — our team is here to help make your experience unforgettable.
           </p>
           <div className="hero-btns">
-            <a href="#contact-form" className="btn btn-terra btn-arrow">Send a Message</a>
+            <a href="#contact-form-panel" className="btn btn-terra btn-arrow">Send a Message</a>
             <a href={RESERVE_URL} target="_blank" rel="noreferrer" className="btn btn-outline-light">
               Reserve a Table
             </a>
@@ -224,7 +224,7 @@ export default function Contact() {
         </div>
 
         {/* RIGHT — form panel */}
-        <div className="contact-form-panel r-right">
+        <div className="contact-form-panel r-right" id="contact-form-panel">
           <div className="eyebrow">Send a Message</div>
           <h2 className="heading-lg">
             We're Here<br />
@@ -298,7 +298,7 @@ export default function Contact() {
               </div>
             </div>
             <a
-              href="https://salvatoressandiego.com/wp-content/uploads/2025/11/HAPPY-HOUR-MENU_cropped.pdf"
+              href="/HAPPY-HOUR-MENU_cropped.pdf"
               target="_blank"
               rel="noreferrer"
               className="btn btn-terra btn-arrow"

@@ -152,8 +152,8 @@ export default function PrivateEvents() {
             where bold Italian cuisine meets a curated lounge atmosphere for moments worth remembering.
           </p>
           <div className="hero-btns">
-            <a href="#inquiry" className="btn btn-terra btn-arrow">Inquire Now</a>
-            <a href="#package" className="btn btn-outline-light">View Package</a>
+            <a href="/contact" className="btn btn-terra btn-arrow">Inquire Now</a>
+            <a href="https://www.opentable.com/booking/restref/availability?correlationId=874f1d76-3fb9-4bd1-baf2-180bb617f4cc&restRef=1474873" className="btn btn-outline-light">View Package</a>
           </div>
           <div className="hero-loc">Private Events at 750 Front Street</div>
         </div>
@@ -230,7 +230,7 @@ export default function PrivateEvents() {
             ))}
           </div>
 
-          <a href="#inquiry" className="btn btn-terra btn-arrow" style={{ marginTop: '2.5rem' }}>
+          <a href="/contact" className="btn btn-terra btn-arrow" style={{ marginTop: '2.5rem' }}>
             Book the Medusa Room
           </a>
         </div>
@@ -250,7 +250,7 @@ export default function PrivateEvents() {
               our exclusive Medusa Room delivers an unforgettable experience — fully curated for you.
               Our team handles every detail so you can focus on the moment.
             </p>
-            <a href="#inquiry" className="btn btn-terra btn-arrow">Inquire About Your Event</a>
+            <a href="/contact" className="btn btn-terra btn-arrow">Inquire About Your Event</a>
           </div>
 
           <div className="package-right r-right">
@@ -262,7 +262,7 @@ export default function PrivateEvents() {
               <ul className="pkg-list">
                 {PKG_INCLUSIONS.map((item) => <li key={item}>{item}</li>)}
               </ul>
-              <a href="#inquiry" className="btn btn-outline-light">Book This Package</a>
+              <a href="https://www.opentable.com/r/salvatores-cucina-and-lounge-reservations-san-marcos?restref=1474873" className="btn btn-outline-light">Book This Package</a>
             </div>
           </div>
         </div>
