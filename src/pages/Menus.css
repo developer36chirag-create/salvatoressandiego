@@ -5,7 +5,13 @@
   min-height: 480px; background: var(--ink);
   display: flex; align-items: flex-end;
   position: relative; overflow: hidden;
+  /* background-image: url(/my-react-app/public/salvatores_brunch_edit_revised_2_trim.mp4-720p.mp4); */
 }
+
+.hero-video {
+  height: 100%;
+}
+
 .page-hero-bg {
   position: absolute; inset: 0;
   background: url('/menu-banner.avif') center/cover no-repeat;

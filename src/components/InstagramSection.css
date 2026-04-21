@@ -5,6 +5,7 @@
   font-family: var(--sans); font-size: .6rem; font-weight: 600;
   letter-spacing: .28em; text-transform: uppercase;
   color: var(--terra); margin-bottom: .75rem;
+  /* background-image: url(/photo-1504674900247-0877df9cc836.avif); */
 }
 .insta-handle-link::before { content: '◈'; font-size: .8em; }
 

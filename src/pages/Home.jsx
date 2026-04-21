@@ -134,10 +134,16 @@ export default function Home() {
         </div>
 
         <div className="hero-right">
-          <img
-            src="/photo-1555396273-367ea4eb4db5.avif"
-            alt="Restaurant ambiance"
-          />
+          <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="hero-video"
+  >
+    <source src="/salvatores_brunch_edit_revised_2_trim.mp4-720p.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
           <div className="hero-badge">
             <div className="hero-badge-inner">
               <strong>★</strong>
