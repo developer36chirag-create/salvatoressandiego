@@ -172,6 +172,12 @@
 .spirits-section .heading-lg { color: var(--ivory); }
 .spirits-section .section-intro-right { color: rgba(255,255,255,.55); }
 .spirits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.5rem); }
+.spirits-grid-new-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.spitits-grid-margin-top {
+  margin-top: 1.5rem;
+}
 .spirit-cat { border: 1px solid rgba(237,231,217,.09); overflow: hidden; }
 .spirit-cat-header { background: rgba(232,97,74,.1); border-bottom: 1px solid rgba(232,97,74,.2); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
 .spirit-cat-name { font-family: var(--display); font-size: 1.1rem; color: var(--ivory); letter-spacing: .06em; }
@@ -259,4 +265,8 @@
   .na-grid { grid-template-columns: 1fr; }
   .wine-tabs { gap: 0; }
   .wine-tab { padding: .9rem 1.1rem; font-size: .56rem; }
+
+  .spitits-grid-margin-top {
+  margin-top: 1rem;
+}
 }

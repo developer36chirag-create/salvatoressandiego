@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useReveal } from '../hooks/useReveal';
 import {
   MENU_CARDS, FEATURED_DRINKS, COCKTAIL_CATEGORIES,
-  SPIRITS, WINE_TABS, WINE_DATA, NA_ITEMS, MENU_TABS, TICKER_ITEMS,
+  SPIRITS, LUXURY, WINE_TABS, WINE_DATA, NA_ITEMS, MENU_TABS, TICKER_ITEMS,
 } from '../data/menusData';
 import './Menus.css';
 import InstagramSection from '../components/InstagramSection';
@@ -308,6 +308,28 @@ export default function Menus() {
               </div>
             ))}
           </div>
+
+
+          <div className="spirits-grid r spitits-grid-margin-top spirits-grid-new-1 ">
+            {LUXURY.map(({ name, count, items }) => (
+              <div className="spirit-cat" key={name}>
+                <div className="spirit-cat-header">
+                  <div className="spirit-cat-name">{name}</div>
+                  <div className="spirit-count">{count}</div>
+                </div>
+                <div className="spirit-list">
+                  {items.map(({ name: itemName, price }) => (
+                    <div className="spirit-item" key={itemName}>
+                      <div className="spirit-name">{itemName}</div>
+                      <div className="spirit-price">{price}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+
         </div>
       </section>
 
